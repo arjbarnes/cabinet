@@ -1,0 +1,27 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persitence_2_1.xsd"
+             version="2.1">
+
+  <persistence-unit name="cabinet">
+
+    <description>Cabinet Entity Manager</description>
+
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <properties>
+      <property name="hibernate.connection.driver_class" value="org.h2.Driver" />
+      <property name="hibernate.connection.url" value="jdbc:h2:file:./cabinet" />
+      <property name="hibernate.connection.username" value="cabinet" />
+      <property name="hibernate.connection.password" value="cabinet" />
+      <property name="hibernate.connection.pool_size" value="1" />
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.internal.NoCacheProvider" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.hbm2ddl.auto" value="update" />
+      <property name="hibernate.current_session_context_class" value="thread" />
+    </properties>
+
+  </persistence-unit>
+
+</persistence>
